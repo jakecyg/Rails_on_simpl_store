@@ -11,19 +11,3 @@ Product.delete_all
   end
 end
 puts "Created #{Product.count} new products."
-
-# movies.each do |m|
-#   production_company = ProductionCompany.find_or_create_by(name: m['production_company'])
-
-#   if production_company&.valid?
-#     movie = production_company.movies.create(
-#       title: m['original_title'],
-#       year: m['year'],
-#       duration: m['duration'],
-#       description: m['description'],
-#       average_vote: m['avg_vote']
-#     )
-#   else
-#     puts "Invalid production company: #{production_company} for the movie #{m['original_title']}."
-#   end
-# end
