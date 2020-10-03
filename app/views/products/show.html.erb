@@ -1,9 +1,14 @@
 <p><strong>Product name: </strong>
   <%=@product.title%>
 </p>
+<p><strong>Product category: </strong>
+  <%=@product.category.name%>
+</p>
 <p><strong>Price: </strong>
   $<%=@product.price%>
 </p>
 <p><strong>Quantity in stock: </strong>
   <%=@product.stock_quantity%>
 </p>
+
+<%=link_to "Back to list of products", products_path%>

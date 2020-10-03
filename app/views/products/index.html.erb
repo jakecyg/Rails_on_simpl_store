@@ -1,6 +1,7 @@
-<h1>List of All Available Products!</h1>
-<ul>
+<h1 class="title is-2">List of All Available Products!</h1>
+<ol>
   <%@products.each do |p|%>
-  <li><%=link_to p.title, p%></li>
+  <li><%=link_to p.title, p%>-<%=p.category.name%>
+  </li>
   <%end%>
-</ul>
+</ol>

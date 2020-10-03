@@ -1,11 +1,9 @@
 class ProductsController < ApplicationController
   def index
-    def index
-      @products = Product.order(:title)
-    end
+    @products = Product.includes(:category).order(:title)
+  end
 
-    def show
-      @product = Product.find(params[:id])
-    end
+  def show
+    @product = Product.includes(:category).find(params[:id])
   end
 end
